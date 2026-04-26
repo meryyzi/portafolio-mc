@@ -1,11 +1,11 @@
 import './App.css'
-import About from './components/About'
-import Experience from './components/Experience'
+import About from './sections/About'
+import Experience from './sections/Experience'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import Projects from './components/Projects'
-import Skills from './components/Skills'
+import Projects from './sections/Projects'
+import Skills from './sections/Skills'
 
 function App() {
   return (
