@@ -1,4 +1,4 @@
-import { ExternalLink, ChevronsLeftRight, Folder } from "lucide-react";
+import { ExternalLink, Folder } from "lucide-react";
 import { motion } from "framer-motion";
 import {
   Carousel,
