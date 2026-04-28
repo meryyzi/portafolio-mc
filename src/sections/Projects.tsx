@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 import { ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import {
@@ -16,6 +18,14 @@ import project6 from "../assets/img/project6.jpg";
 import project7 from "../assets/img/project7.jpg";
 
 const Projects = () => {
+  const autoplay = useRef(
+    Autoplay({
+      delay: 3500,
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+    })
+  );
+
   const ease = [0.22, 1, 0.36, 1] as const;
   const section = {
     hidden: { opacity: 0 },
@@ -116,6 +126,7 @@ const Projects = () => {
 
         <motion.div variants={item}>
         <Carousel
+          plugins={[autoplay.current]}
           opts={{ align: "start", loop: true }} 
           className="w-full relative"
         >

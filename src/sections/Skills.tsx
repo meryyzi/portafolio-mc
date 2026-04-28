@@ -32,13 +32,13 @@ const Skills = () => {
     },
     {
       title: "Backend",
-      icon: <Database className="text-cyan-400" size={24} />,
+      icon: <Code2 className="text-cyan-400" size={24} />,
       skills: ["C#", "Java", "Springboot", ".NET", "Node.js", "Express"],
       color: "group-hover:shadow-cyan-500/20"
     },
     {
       title: "Bases de Datos",
-      icon: <Code2 className="text-indigo-400" size={24} />,
+      icon: <Database className="text-indigo-400" size={24} />,
       skills: ["SQL Server", "PocketBase", "PostgreSQL", "Supabase", "Firebase", "MongoDB"],
       color: "group-hover:shadow-indigo-500/20"
     },
@@ -71,7 +71,7 @@ const Skills = () => {
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
     >
-      
+
       <style>{`
         @keyframes float-1 {
           0%, 100% { transform: translateY(0px) translateX(0px); }
@@ -104,8 +104,14 @@ const Skills = () => {
         .animate-float-5 { animation: float-5 3.8s ease-in-out infinite; }
         .animate-float-6 { animation: float-6 4.2s ease-in-out infinite; }
       `}</style>
-      
+
+
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none" />
+      
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[45%] h-[45%] bg-cyan-400/10 blur-[120px] rounded-full" />
+      </div>
 
       <motion.div className="max-w-6xl mx-auto z-10 relative" variants={section}>
         <motion.div className="text-center mb-20 space-y-4" variants={section}>
@@ -121,7 +127,7 @@ const Skills = () => {
         <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8" variants={section}>
           {skillCategories.map((cat, index) => (
             <motion.div
-              key={index} 
+              key={index}
               className={`group bg-[#0a1120] border border-white/5 p-8 rounded-[2rem] hover:border-white/20 transition-all duration-500 hover:-translate-y-2 ${cat.color} hover:shadow-2xl`}
               variants={item}
             >
@@ -135,7 +141,7 @@ const Skills = () => {
               <motion.div className="flex flex-wrap gap-3" variants={chips}>
                 {cat.skills.map((skill, sIndex) => (
                   <motion.span
-                    key={sIndex} 
+                    key={sIndex}
                     className={`px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-slate-400 text-sm font-medium hover:bg-linear-to-r hover:from-blue-600/20 hover:to-cyan-500/20 hover:text-white hover:border-blue-500/30 transition-all cursor-default ${getFloatAnimation(sIndex)}`}
                     variants={chip}
                   >

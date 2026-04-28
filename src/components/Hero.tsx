@@ -103,7 +103,6 @@ const Hero = () => {
 
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
 
-        {/* Blob principal */}
         <motion.div
           className="absolute w-[50%] h-[50%] bg-blue-500/30 blur-[120px] rounded-full"
           animate={{
@@ -117,7 +116,6 @@ const Hero = () => {
           }}
         />
 
-        {/* Blob secundario */}
         <motion.div
           className="absolute w-[40%] h-[40%] bg-cyan-400/30 blur-[100px] rounded-full"
           animate={{
@@ -131,7 +129,6 @@ const Hero = () => {
           }}
         />
 
-        {/* Blob pequeño */}
         <motion.div
           className="absolute w-[30%] h-[30%] bg-blue-400/20 blur-[80px] rounded-full"
           animate={{
