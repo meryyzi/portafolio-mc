@@ -1,4 +1,4 @@
-import { ExternalLink, Folder } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import {
   Carousel,
@@ -39,7 +39,7 @@ const Projects = () => {
     {
       title: "Las Tunas Casa Campestre",
       description: "Página web para Las Tunas Casa Campestre, diseñada para presentar un club campestre y centro de eventos que ofrece restaurantes, bungalows y espacios para celebraciones en un entorno natural.",
-      tech: ["Astro", "Framer Motion", "TypeScript"],
+      tech: ["Astro", "React", "Tailwind", "PocketBase"],
       link: "https://lastunasacascampestre.com/",
       github: "#",
       image: project5,
@@ -47,7 +47,7 @@ const Projects = () => {
     {
       title: "Las Tunas Tickets",
       description: "Página web de venta y gestión de tickets para eventos y actividades de Las Tunas Casa Campestre. Permite a los usuarios consultar disponibilidad y realizar reservas o compras de entradas en línea.",
-      tech: ["Next.js", "TypeScript", "Bun", "Tailwind"],
+      tech: ["Next.js", "TypeScript", "Tailwind", "PocketBase"],
       link: "#",
       github: "#",
       image: project6,
@@ -55,7 +55,7 @@ const Projects = () => {
     {
       title: "H&S Suministros Veterinarios",
       description: "Landing page desarrollada para H&S Suministros Veterinarios, una plataforma que presenta y promociona productos para el cuidado y salud animal, como medicamentos, alimentos y accesorios veterinarios.",
-      tech: ["Astro", "React", "Tailwind", "PocketBase"],
+      tech: ["Astro", "React", "Tailwind", "Drizzle ORM"],
       link: "https://hyssuministrosveterinarios.com/",
       github: "#",
       image: project7,
@@ -63,7 +63,7 @@ const Projects = () => {
     {
       title: "Gustavo Cerati - Fan Page",
       description: "Landing page dedicada a Gustavo Cerati, el icónico músico argentino. La página presenta su biografía, discografía, etc.",
-      tech: ["Next.js", "Framer Motion", "TypeScript"],
+      tech: ["React", "Tailwind", "TypeScript"],
       link: "https://mc-cerati.vercel.app/",
       github: "#",
       image: project1,
@@ -71,7 +71,7 @@ const Projects = () => {
     {
       title: "Página de Turismo",
       description: "Landing page en inglés para una página de turismo, diseñada para presentar destinos turísticos, actividades y servicios disponibles para los visitantes.",
-      tech: ["Astro", "React", "Tailwind", "PocketBase"],
+      tech: ["Angular", "Tailwind"],
       link: "https://mc-expediatravel.vercel.app/",
       github: "#",
       image: project2,
@@ -79,7 +79,7 @@ const Projects = () => {
     {
       title: "Pupp's",
       description: "Landing page en inglés presenta información sobre los productos, beneficios y más información para los dueños de mascotas.",
-      tech: ["Astro", "React", "Tailwind", "PocketBase"],
+      tech: ["Angular", "Tailwind"],
       link: "https://mc-pupps.vercel.app/",
       github: "#",
       image: project3,
@@ -95,8 +95,7 @@ const Projects = () => {
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
     >
-      
-      {/* Blurs Celestes Dinámicos */}
+
       <div className="absolute top-[20%] -left-20 w-[400px] h-[400px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[10%] -right-20 w-[500px] h-[500px] bg-blue-600/10 blur-[150px] rounded-full pointer-events-none" />
 
@@ -115,7 +114,6 @@ const Projects = () => {
           </motion.p>
         </motion.div>
 
-        {/* Carousel de Shadcn */}
         <motion.div variants={item}>
         <Carousel
           opts={{ align: "start", loop: true }} 
@@ -129,7 +127,6 @@ const Projects = () => {
                   variants={item}
                 >
                   
-                  {/* Imagen del proyecto */}
                   <div className="relative h-64 overflow-hidden">
                     <div className="absolute inset-0 bg-blue-900/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
                     <img 
@@ -144,7 +141,6 @@ const Projects = () => {
                     </div> */}
                   </div>
 
-                  {/* Contenido */}
                   <div className="p-8 space-y-6">
                     <div className="flex justify-between items-start">
                       <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
@@ -169,29 +165,27 @@ const Projects = () => {
                     </div>
                   </div>
                   
-                  {/* Glow effect */}
                   <div className="absolute -inset-1 bg-linear-to-r from-blue-600/20 to-cyan-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
                 </motion.div>
               </CarouselItem>
             ))}
           </CarouselContent>
 
-          {/* Flechas de Navegación Personalizadas */}
           <div className="flex justify-center gap-4 mt-12">
-            <CarouselPrevious className="static translate-y-0 bg-[#0a1120] border-white/10 text-white hover:bg-blue-600 hover:border-blue-500 transition-all" />
-            <CarouselNext className="static translate-y-0 bg-[#0a1120] border-white/10 text-white hover:bg-blue-600 hover:border-blue-500 transition-all" />
+            <CarouselPrevious className="static translate-y-0 bg-[#0a1120] border-white/10 text-white hover:bg-cyan-500 hover:border-cyan-500 transition-all" />
+            <CarouselNext className="static translate-y-0 bg-[#0a1120] border-white/10 text-white hover:bg-cyan-500 hover:border-cyan-500 transition-all" />
           </div>
         </Carousel>
         </motion.div>
 
         {/* Footer de la sección */}
-        <motion.div className="mt-20 text-center" variants={item}>
+    {/*     <motion.div className="mt-20 text-center" variants={item}>
             <button className="inline-flex items-center gap-3 text-slate-500 hover:text-white font-medium transition-all group">
                 <Folder size={20} className="text-blue-500/50 group-hover:text-blue-500 transition-colors" />
                 Explorar archivos en GitHub
                 <span className="w-12 h-px bg-slate-800 group-hover:w-20 group-hover:bg-cyan-500 transition-all"></span>
             </button>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </motion.section>
   );

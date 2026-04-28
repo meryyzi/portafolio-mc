@@ -93,7 +93,7 @@ const About = () => {
               <MapPin className="text-cyan-400" size={20} />
               <div>
                 <p className="text-slate-500 text-[10px] uppercase font-bold">Ubicación</p>
-                <p className="text-slate-200 text-sm font-medium">Villa El Salvador, Perú</p>
+                <p className="text-slate-200 text-sm font-medium">Villa El Salvador, Lima</p>
               </div>
             </motion.div>
 
